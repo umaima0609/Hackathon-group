@@ -7,32 +7,23 @@ import Login from "./Components/Auth/Login";
 import { Authprovider } from './Components/Auth/AuthContext';
 import Done from './Components/Student/Done';
 import About from './Components/About';
-
-
-
+import FeedbackForm from './Components/Student/FeedbackForm'; // Import the FeedbackForm component
 
 const App = () => {
   return (
-    <><Authprovider>
+    <Authprovider>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout />} />
           <Route path='/about' element={<About />} />
           <Route path='/done' element={<Done />} />
-          
-       
-         
-
-
-
-       
-        
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          </Routes><Toaster />
+          <Route path='/feedback' element={<FeedbackForm />} />  {/* Add this line */}
+        </Routes>
+        <Toaster />
       </BrowserRouter>
-    </Authprovider></>
-    
+    </Authprovider>
   );
 }
 

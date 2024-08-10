@@ -25,17 +25,17 @@ const Signup = () => {
   const [sshift, setshifts] = useState([])
   const [s, sets] = useState("")
 
-  const alldepartments = async () => {
-    try {
-      setloader(true)
-      const response = await axios.get("https://vercel-zpzg.vercel.app/api/v1/department");
-      console.log(response.data.departments);
-      setdepartments(response.data.departments);
-      setloader(false)
-    } catch (error) {
-      console.error("Error fetching departments:", error);
-    }
-  };
+  // const alldepartments = async () => {
+  //   try {
+  //     setloader(true)
+  //     const response = await axios.get("https://vercel-zpzg.vercel.app/api/v1/department");
+  //     console.log(response.data.departments);
+  //     setdepartments(response.data.departments);
+  //     setloader(false)
+  //   } catch (error) {
+  //     console.error("Error fetching departments:", error);
+  //   }
+  // };
 
   const shifts = async () => {
     const { data } = await axios.get("https://vercel-zpzg.vercel.app/api/v1/shifts")
@@ -47,24 +47,24 @@ const Signup = () => {
     e.preventDefault();
     setloader(true)
 
-    if (dept === "" || sem === "") {
-      toast.error("Please fill all fields");
+    // if (dept === "" || sem === "") {
+    //   toast.error("Please fill all fields");
 
-    }
-    if (Password.length !== 6) {
-      toast.error("Password  size should be 6 letters");
+    // }
+    if (Password.length !== 8) {
+      toast.error("Password  size should be 8 letters");
     }
     try {
       setloader(true)
       const { data } = await axios.post("https://vercel-zpzg.vercel.app/api/v1/register", {
         name: name,
         email: email,
-        Enroll: enroll,
+        // Enroll: enroll,
         password: Password,
         phone: phone,
-        department: dept,
-        sem: sem,
-        shift: s
+        // department: dept,
+        // sem: sem,
+        // shift: s
       });
       console.log(data)
       if (data.success) {
@@ -97,44 +97,44 @@ const Signup = () => {
 
   // http://localhost:5000/api/v1/getsembydep
 
-  const getsems = async (dep) => {
-    console.log("dd", dep);
-    setloader(true)
-    try {
-      setloader(true)
-      const { data } = await axios.post(`https://vercel-zpzg.vercel.app/api/v1/getsembydep`, {
-        dep: dep
-      });
+  // const getsems = async (dep) => {
+  //   console.log("dd", dep);
+  //   setloader(true)
+  //   try {
+  //     setloader(true)
+  //     const { data } = await axios.post(`https://vercel-zpzg.vercel.app/api/v1/getsembydep`, {
+  //       dep: dep
+  //     });
 
-      console.log(data.sems);
-      setsemester(data.sems);
-      setloader(false)
+  //     console.log(data.sems);
+  //     setsemester(data.sems);
+  //     setloader(false)
 
-    } catch (error) {
-      console.error("Error fetching semesters:", error);
-    }
-  };
+  //   } catch (error) {
+  //     console.error("Error fetching semesters:", error);
+  //   }
+  // };
 
 
-  const handlechange = (value) => {
-    console.log("department", value)
-    getsems(value)
-    setdept(value)
+  // const handlechange = (value) => {
+  //   console.log("department", value)
+  //   getsems(value)
+  //   setdept(value)
 
-  };
+  // };
 
-  const handlesem = (value) => {
-    console.log("sem", value);
-    setsem(value);
-  };
-  const handles = (value) => {
-    console.log("sem", value);
-    sets(value);
-  };
+  // const handlesem = (value) => {
+  //   console.log("sem", value);
+  //   setsem(value);
+  // };
+  // const handles = (value) => {
+  //   console.log("sem", value);
+  //   sets(value);
+  // };
 
   useEffect(() => {
 
-    alldepartments();
+    // alldepartments();
     shifts();
     const anim = lottie.loadAnimation({
       container: document.getElementById('lottie-container'),
@@ -174,12 +174,12 @@ const Signup = () => {
             value={email} onChange={(e) => setemail(e.target.value)} />
           <input type='text' required placeholder='Enter Password ' className='w-full p-2 border-2 my-2 rounded-2xl'
             value={Password} onChange={(e) => setpassword(e.target.value)} />
-          <input type='text' required placeholder='Enter Enroll' className='w-full p-2 border-2 rounded-2xl my-2 '
-            value={enroll} onChange={(e) => setenroll(e.target.value)} />
+          {/* <input type='text' required placeholder='Enter Enroll' className='w-full p-2 border-2 rounded-2xl my-2 '
+            value={enroll} onChange={(e) => setenroll(e.target.value)} /> */}
           <input type='text' required placeholder='Enter Phone ' className='w-full p-2 border-2 rounded-2xl '
             value={phone} onChange={(e) => setphone(e.target.value)} />
 
-          <Select className='w-full ant-input text-xl mt-4 rounded-2xl ' placeholder='Select a Department' onChange={handlechange}>
+          {/* <Select className='w-full ant-input text-xl mt-4 rounded-2xl ' placeholder='Select a Department' onChange={handlechange}>
             {departments.map((s) => (
               <Option key={s._id} value={s._id}>
                 {s.name}
@@ -202,7 +202,7 @@ const Signup = () => {
                 {s.name}
               </Option>
             ))}
-          </Select>
+          </Select> */}
           <input type='submit' className='w-[100%] bg-blue-700 border-2 rounded-2xl  p-2 mt-6 text-white' />
           <h1 className='text-center mt-2 font-semibold'>Already Registered ? <Link to="/login" className='text-blue-800'>Sign in Here</Link></h1>
         </form>

@@ -10,10 +10,12 @@ const Done = () => {
 
         return () => clearTimeout(timer);
     }, []);
-    const { theme } = useAuth()
+
+    const { theme } = useAuth();
+    
     return (
-        <div className={`p-2 h-[91vh] flex justify-center items-center overflow-y-auto sm:p-5 ${theme == "light" ? "bg-white " : "bg-[#1d232a]"}`}>
-            <h1 className='text-xl sm:text-4xl font-bold'> Feedback Submitted Succesfully🙌</h1>
+        <div className={`p-2 h-[91vh] flex justify-center items-center overflow-y-auto sm:p-5 ${theme === "light" ? "bg-white" : "bg-[#1d232a]"}`}>
+            <h1 className='text-xl sm:text-4xl font-bold'>Feedback Submitted Successfully 🙌</h1>
             <Confetti />
         </div>
     );
