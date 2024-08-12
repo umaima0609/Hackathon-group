@@ -4,9 +4,17 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from './Auth/AuthContext'
 import { TypeAnimation } from 'react-type-animation';
 import lottie from 'lottie-web';
+<<<<<<< Updated upstream
 import toast from "react-hot-toast"
 import { HiOutlineLogout } from "react-icons/hi"
 import ppj from "./ff.json"
+=======
+import toast from "react-hot-toast";
+import { HiOutlineLogout } from "react-icons/hi";
+import ppj from "./ff.json";
+import Nav from './Nav';
+
+>>>>>>> Stashed changes
 const Home = () => {
 
 
@@ -36,8 +44,14 @@ const Home = () => {
     }, []);
     // const navigate = useNavigate()
     return (
+        
         <div>
+<<<<<<< Updated upstream
             <section className={`${theme == "light" ? "bg-white" : "bg-[#1d232a]"} hidden sm:block p-6 font-bold  w-full justify-center items-center `}>
+=======
+        
+            {/* <section className={`${theme === "light" ? "bg-white" : "bg-[#1d232a]"} hidden sm:block p-6 font-bold  w-full justify-center items-center `}>
+>>>>>>> Stashed changes
                 {auth?.user?.role === 0 ? (
                     <section className='flex justify-end mr-[22vh] items-end'>
                       
