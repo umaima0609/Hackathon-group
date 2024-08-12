@@ -17,6 +17,7 @@ const FeedbackForm = () => {
     question10: '',
   });
 
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -28,6 +29,20 @@ const FeedbackForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validation
+    const newErrors = {};
+    Object.keys(feedback).forEach((key) => {
+      if (!feedback[key]) {
+        newErrors[key] = 'This field is required';
+      }
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     console.log('Feedback submitted:', feedback);
     setFeedback({
       question1: '',
@@ -41,6 +56,7 @@ const FeedbackForm = () => {
       question9: '',
       question10: '',
     });
+    setErrors({});
     navigate('/done');
   };
 
@@ -61,6 +77,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question1 && <p className="error-message">{errors.question1}</p>}
           </div>
 
           <div className="form-group">
@@ -71,6 +88,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question2 && <p className="error-message">{errors.question2}</p>}
           </div>
 
           <div className="form-group">
@@ -81,6 +99,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question3 && <p className="error-message">{errors.question3}</p>}
           </div>
 
           <div className="form-group">
@@ -91,6 +110,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question4 && <p className="error-message">{errors.question4}</p>}
           </div>
 
           <div className="form-group">
@@ -101,6 +121,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question5 && <p className="error-message">{errors.question5}</p>}
           </div>
 
           <div className="form-group">
@@ -111,6 +132,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question6 && <p className="error-message">{errors.question6}</p>}
           </div>
 
           <div className="form-group">
@@ -121,6 +143,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question7 && <p className="error-message">{errors.question7}</p>}
           </div>
 
           <div className="form-group">
@@ -131,6 +154,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question8 && <p className="error-message">{errors.question8}</p>}
           </div>
 
           <div className="form-group">
@@ -141,6 +165,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question9 && <p className="error-message">{errors.question9}</p>}
           </div>
 
           <div className="form-group">
@@ -151,6 +176,7 @@ const FeedbackForm = () => {
               <option value="Average">😐 Average</option>
               <option value="Excellent">🌟 Excellent</option>
             </select>
+            {errors.question10 && <p className="error-message">{errors.question10}</p>}
           </div>
 
           <button type="submit" className="submit-button">Submit Feedback</button>
