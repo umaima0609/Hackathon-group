@@ -19,7 +19,7 @@ const Footer = () => {
             <h1 className="font-bold text-blue-700  text-xl">
               SMIT Student FeedBacker
             </h1>
-            <h1 >All rights are reserved.</h1>
+            <h1 className="pl-0">All rights are reserved.</h1>
             <section className="flex mt-7 gap-3">
               <AiOutlineTwitter size={33} />
               <AiOutlineInstagram size={33} />
