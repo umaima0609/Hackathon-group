@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuth } from './Auth/AuthContext'
-import dashImg from "../assets/C.png"
+import dashImg from "../assets/about-dashboard-img.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { BsInstagram, BsGithub } from 'react-icons/bs'
 import Nav from './Nav'
@@ -27,7 +27,7 @@ const About = () => {
                 </section>
                 <section className='px-5 mt-5 sm:h-[60%] h-[30%] flex justify-center items-center  w-[100%] sm:w-[60%]'>
 
-                    <img src={dashImg} alt='' className=' w-[100%] sm:w-[70%]  h-[100%] border-2 rounded-lg' />
+                    <img src={dashImg} alt='' className=' w-[100%] sm:w-[70%] h-[100%] border-2 rounded-lg' />
                 </section>
             </div><br /><br />
             <section className='w-full  h-[2vh] flex justify-center items-center'>

@@ -105,6 +105,7 @@ const FeedbackForm = () => {
               onChange={handleChange}
               value={feedback.question1}
               style={selectStyle}
+              required
             >
               <option value="">Select</option>
               <option value="Good">👍 Good</option>
@@ -115,7 +116,7 @@ const FeedbackForm = () => {
           
             <div div className="formGroup" style={formGroup}>
           <label style={labelStyle}>2. How was the course content?</label>
-          <select name="question2" onChange={handleChange} value={feedback.question2} style={selectStyle}>
+          <select name="question2" onChange={handleChange} value={feedback.question2} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -125,7 +126,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup " style={formGroup}>
           <label style={labelStyle}>3. How was the interaction with the instructor?</label>
-          <select name="question3" onChange={handleChange} value={feedback.question3} style={selectStyle}>
+          <select name="question3" onChange={handleChange} value={feedback.question3} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -135,7 +136,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup" style={formGroup}>
           <label style={labelStyle}>4. How was the overall learning environment?</label>
-          <select name="question4" onChange={handleChange} value={feedback.question4} style={selectStyle}>
+          <select name="question4" onChange={handleChange} value={feedback.question4} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -145,7 +146,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup" style={formGroup}>
           <label style={labelStyle}>5. How likely are you to recommend this course to others?</label>
-          <select name="question5" onChange={handleChange} value={feedback.question5} style={selectStyle}>
+          <select name="question5" onChange={handleChange} value={feedback.question5} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -155,7 +156,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup" style={formGroup}>
           <label style={labelStyle}>6. How clear were the course materials?</label>
-          <select name="question6" onChange={handleChange} value={feedback.question6} style={selectStyle}>
+          <select name="question6" onChange={handleChange} value={feedback.question6} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -165,7 +166,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup" style={formGroup}>
           <label style={labelStyle}>7. How helpful were the course resources?</label>
-          <select name="question7" onChange={handleChange} value={feedback.question7} style={selectStyle}>
+          <select name="question7" onChange={handleChange} value={feedback.question7} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -175,7 +176,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup" style={formGroup}>
           <label style={labelStyle}>8. How engaging were the class activities?</label>
-          <select name="question8" onChange={handleChange} value={feedback.question8} style={selectStyle}>
+          <select name="question8" onChange={handleChange} value={feedback.question8} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -185,7 +186,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup" style={formGroup}>
           <label style={labelStyle}>9. How effective was the feedback from the instructor?</label>
-          <select name="question9" onChange={handleChange} value={feedback.question9} style={selectStyle}>
+          <select name="question9" onChange={handleChange} value={feedback.question9} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>
@@ -195,7 +196,7 @@ const FeedbackForm = () => {
 
         <div className="formGroup mb-7" style={formGroup}>
           <label style={labelStyle}>10. How satisfied are you with the overall course?</label>
-          <select name="question10" onChange={handleChange} value={feedback.question10} style={selectStyle}>
+          <select name="question10" onChange={handleChange} value={feedback.question10} style={selectStyle} required>
             <option value="">Select</option>
             <option value="Good">👍 Good</option>
             <option value="Average">😐 Average</option>

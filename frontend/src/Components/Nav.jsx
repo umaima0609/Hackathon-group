@@ -124,6 +124,7 @@ export default function Nav() {
                 <ul className={`bg-gray-300 flex flex-col absolute left-0 h-screen shadow-sm ${nav ? 'w-[90%] sm:w-17' : "w-0 overflow-hidden"} transition-all ease-linear duration-200`}>
                     <li className={linkClasses} onClick={() => navigate("/")}>Home</li>
                     <li className={linkClasses} onClick={() => navigate("/about")}>About</li>
+                    <li className={linkClasses} onClick={() => navigate("/feedback")}>FeedBack Form</li>
                     
 
                     <li className='mx-2 text-black my-1 font-semibold hover:border-b-2'>
@@ -143,7 +144,7 @@ export default function Nav() {
                     </li>
 
                     <li onClick={handleLogOut} className={`${theme === "light" ? "" : "text-white"} flex mt-2 text-black hover:border-b-2 border-blue-700`}>
-                        <HiOutlineLogout size={27} className='pr-2 mt-1 pb-2' />
+                    &nbsp; <span className='font-bold'>Logout&nbsp;</span> <HiOutlineLogout size={27} className='pr-2 mt-1 pb-2' />
                     </li>
                 </ul>
             </section>
