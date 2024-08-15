@@ -1,9 +1,10 @@
 import React from 'react'
 import { useAuth } from './Auth/AuthContext'
-import dashImg from "../assets/C.png"
+import dashImg from "../assets/about-dashboard-img.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { BsInstagram, BsGithub } from 'react-icons/bs'
 import Nav from './Nav'
+import Footer from './Footer'
 
 
 
@@ -26,11 +27,11 @@ const About = () => {
                 </section>
                 <section className='px-5 mt-5 sm:h-[60%] h-[30%] flex justify-center items-center  w-[100%] sm:w-[60%]'>
 
-                    <img src={dashImg} alt='' className=' w-[100%] sm:w-[70%]  h-[100%] border-2 rounded-lg' />
+                    <img src={dashImg} alt='' className=' w-[100%] sm:w-[70%] h-[100%] border-2 rounded-lg' />
                 </section>
             </div><br /><br />
             <section className='w-full  h-[2vh] flex justify-center items-center'>
-                <h1 className='font-bold text-xl text-center  border-b-2 '>About Developers</h1>
+                <h1 className='font-bold text-xl text-center  border-b-2 '>About Trainers</h1>
             </section>
 
             <div className=" mt-2 w-[100%] ">
@@ -40,13 +41,13 @@ const About = () => {
     ${theme === "light" ? "bg-gray-100 border-2 border-gray-700" : "bg-[#0c131d] border-2 border-gray-300 shadow-lg"}
   `}
 >
-                        <h1 className='font-bold text-xl p-2'>Umaima Khan</h1>
-                        <h1 className='px-2 '>Web Developer</h1>
+                        <h1 className='font-bold text-xl p-2'>Faiza Aziz </h1>
+                        <h1 className='px-2 '>Mernstack Female Trainer</h1>
                         <div className='flex flex-row space-x-4 px-2 '>
-                            <Link to='https://github.com/umaima0609' className='py-4 cursor-pointer'>
+                            <Link to='https://github.com/FazzyA' className='py-4 cursor-pointer'>
                                 <BsGithub size={20} />
                             </Link>
-                            <Link to='https://instagram.com/umaimakhan?igshid=OGQ5ZDc2ODk2ZA==' className='py-4 cursor-pointer'>
+                            <Link to='https://instagram.com/Faiza' className='py-4 cursor-pointer'>
                                 <BsInstagram size={20} />
                             </Link>
                         </div>
@@ -56,13 +57,13 @@ const About = () => {
     ${theme === "light" ? "bg-gray-100 border-2 border-gray-700" : "bg-[#0c131d] border-2 border-gray-300 shadow-lg"}
   `}
 >
-                        <h1 className='font-bold text-xl p-2'>Wania Mustafa</h1>
-                        <h1 className='px-2 '>Web Developer</h1>
+                        <h1 className='font-bold text-xl p-2'>Miss Iqra </h1>
+                        <h1 className='px-2 '>Mernstack Female Trainer</h1>
                         <div className='flex flex-row space-x-4 px-2 '>
-                            <Link to='https://github.com/waniamustafa23' className='py-4 cursor-pointer'>
+                            <Link to='https://github.com/iqra' className='py-4 cursor-pointer'>
                                 <BsGithub size={20} />
                             </Link>
-                            <Link to='https://instagram.com/waniamustafa23?igshid=OGQ5ZDc2ODk2ZA==' className='py-4 cursor-pointer'>
+                            <Link to='https://instagram.com/iqra' className='py-4 cursor-pointer'>
                                 <BsInstagram size={20} />
                             </Link>
                         </div>
@@ -71,13 +72,13 @@ const About = () => {
   className={`hover:scale-110 my-5 mx-5 transition-all ease-linear w-[90%] duration-200 relative p-3 flex justify-center items-start flex-col rounded-lg h-40 
     ${theme === "light" ? "bg-gray-100 border-2 border-gray-700" : "bg-[#0c131d] border-2 border-gray-300 shadow-lg"}
   `}
->                        <h1 className='font-bold text-xl p-2'>Iqra Shehzad</h1>
-                        <h1 className='px-2 '>Web Developer</h1>
+>                        <h1 className='font-bold text-xl p-2'>Muneeba Rashid  </h1>
+                        <h1 className='px-2 '>UI/UX Female Trainer</h1>
                         <div className='flex flex-row space-x-4 px-2 '>
-                            <Link to='https://github.com/' className='py-4 cursor-pointer'>
+                            <Link to='https://github.com/muneeba' className='py-4 cursor-pointer'>
                                 <BsGithub size={20} />
                             </Link>
-                            <Link to='https://instagram.com/iqrashahzad?igshid=OGQ5ZDc2ODk2ZA==' className='py-4 cursor-pointer'>
+                            <Link to='https://instagram.com/muneeba' className='py-4 cursor-pointer'>
                                 <BsInstagram size={20} />
                             </Link>
                         </div>
@@ -86,19 +87,50 @@ const About = () => {
   className={`hover:scale-110 my-5 mx-5 transition-all ease-linear w-[90%] duration-200 relative p-3 flex justify-center items-start flex-col rounded-lg h-40 
     ${theme === "light" ? "bg-gray-100 border-2 border-gray-700" : "bg-[#0c131d] border-2 border-gray-300 shadow-lg"}
   `}
->                        <h1 className='font-bold text-xl p-2'>Misbah Shakil</h1>
-                        <h1 className='px-2 '>Web Developer</h1>
+>                        <h1 className='font-bold text-xl p-2'>Hafsa Abid</h1>
+                        <h1 className='px-2 '>Graphic Designing Female Trainer</h1>
                         <div className='flex flex-row space-x-4 px-2 '>
-                            <Link to='https://github.com/misbahshakil223' className='py-4 cursor-pointer'>
+                            <Link to='https://github.com/hafsa' className='py-4 cursor-pointer'>
                                 <BsGithub size={20} />
                             </Link>
-                            <Link to='https://instagram.com/misbahShakil?igshid=OGQ5ZDc2ODk2ZA==' className='py-4 cursor-pointer'>
+                            <Link to='https://instagram.com/hafsa' className='py-4 cursor-pointer'>
+                                <BsInstagram size={20} />
+                            </Link>
+                        </div>
+                    </div>
+                    <div
+  className={`hover:scale-110 my-5 mx-5 transition-all ease-linear w-[90%] duration-200 relative p-3 flex justify-center items-start flex-col rounded-lg h-40 
+    ${theme === "light" ? "bg-gray-100 border-2 border-gray-700" : "bg-[#0c131d] border-2 border-gray-300 shadow-lg"}
+  `}
+>                        <h1 className='font-bold text-xl p-2'>Ghouse Aehmad </h1>
+                        <h1 className='px-2 '>MernStack Male Trainer</h1>
+                        <div className='flex flex-row space-x-4 px-2 '>
+                            <Link to='https://github.com/ghouse' className='py-4 cursor-pointer'>
+                                <BsGithub size={20} />
+                            </Link>
+                            <Link to='https://instagram.com/ghouse' className='py-4 cursor-pointer'>
+                                <BsInstagram size={20} />
+                            </Link>
+                        </div>
+                    </div>
+                    <div
+  className={`hover:scale-110 my-5 mx-5 transition-all ease-linear w-[90%] duration-200 relative p-3 flex justify-center items-start flex-col rounded-lg h-40 
+    ${theme === "light" ? "bg-gray-100 border-2 border-gray-700" : "bg-[#0c131d] border-2 border-gray-300 shadow-lg"}
+  `}
+>                        <h1 className='font-bold text-xl p-2'>Aisha Khan </h1>
+                        <h1 className='px-2 '>Mernstack Female Trainer</h1>
+                        <div className='flex flex-row space-x-4 px-2 '>
+                            <Link to='https://github.com/aishakhan' className='py-4 cursor-pointer'>
+                                <BsGithub size={20} />
+                            </Link>
+                            <Link to='https://instagram.com/aishakhan' className='py-4 cursor-pointer'>
                                 <BsInstagram size={20} />
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
 
     )

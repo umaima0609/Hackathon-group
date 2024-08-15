@@ -7,7 +7,7 @@ import Login from "./Components/Auth/Login";
 import { Authprovider } from './Components/Auth/AuthContext';
 import Done from './Components/Student/Done';
 import About from './Components/About';
-import FeedbackForm from './Components/Student/FeedbackForm'; // Import the FeedbackForm component
+import FeedbackForm from './Components/Student/FeedbackForm'; 
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
           <Route path='/done' element={<Done />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/feedback' element={<FeedbackForm />} />  {/* Add this line */}
+          <Route path='/feedback' element={<FeedbackForm />} />  
         </Routes>
         <Toaster />
       </BrowserRouter>
