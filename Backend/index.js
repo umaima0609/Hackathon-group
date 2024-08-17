@@ -7,15 +7,15 @@ const cors = require("cors")
 
 
 app.use(cors());
-// app.use(express.json());
+// // app.use(express.json());
 
 
-app.use(cors({
+// app.use(cors({
   
-  origin:  ['http://localhost:5173','https://final-smit-student-feedbacker-02.vercel.app/'],
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true
-}));
+//   origin:  ['http://localhost:5173','https://final-smit-student-feedbacker-02.vercel.app/'],
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true
+// }));
 
 const auth = require("./Routers/Auth")
 
