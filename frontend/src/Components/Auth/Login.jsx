@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     setloader(true)
     try {
-      const { data } = await axios.post("http://localhost:3000/api/v1/login", {
+      const { data } = await axios.post("https://final-smit-student-feedbaker-backend.vercel.app/api/v1/login", {
         email: email,
         password: Password
       })

@@ -23,7 +23,7 @@ const Signup = () => {
 
 
   const shifts = async () => {
-    const { data } = await axios.get("http://localhost:3000/api/v1/register")
+    const { data } = await axios.get("https://final-smit-student-feedbaker-backend.vercel.app/api/v1/register")
     console.log(data)
     setshifts(data.shifts)
   }
@@ -41,7 +41,7 @@ const Signup = () => {
     }
     try {
       setloader(true)
-      const { data } = await axios.post("http://localhost:3000/api/v1/register", {
+      const { data } = await axios.post("https://final-smit-student-feedbaker-backend.vercel.app/api/v1/register", {
         name: name,
         email: email,
         rollnum: rollnum,
