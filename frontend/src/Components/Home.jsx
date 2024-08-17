@@ -36,9 +36,10 @@ const Home = () => {
         return () => anim.destroy();
     }, []);
 
+   
     return (
         <div>
-            <section className={`${theme === "light" ? "bg-white" : "bg-[#1d232a]"} hidden sm:block p-6 font-bold  w-full justify-center items-center `}>
+            <section className={`${theme === "light" ? "bg-white" : "bg-[#1d232a]"}  sm:block p-6 font-bold  w-full justify-center items-center `}>
                 {auth?.user?.role === 0 ? (
                     <section className='flex justify-end mr-[22vh] items-end'>
                         <Link

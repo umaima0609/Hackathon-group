@@ -19,11 +19,12 @@ const Login = () => {
     e.preventDefault();
     setloader(true)
     try {
-      const { data } = await axios.post("https://vercel-zpzg.vercel.app/api/v1/login", {
+      const { data } = await axios.post("http://localhost:3000/api/v1/login", {
         email: email,
         password: Password
       })
       if (data.success) {
+        
         toast.success(" login succesfully ", {
           autoClose: 2000,
         });
@@ -43,9 +44,8 @@ const Login = () => {
         toast.error("check email or password")
         setloader(false)
       }
-
-
     } catch (error) {
+      
       if (error.response && error.response.data && error.response.data.message) {
         toast.error(error.response.data.message, {
           autoClose: 2000,

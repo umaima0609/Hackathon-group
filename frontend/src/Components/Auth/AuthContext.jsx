@@ -8,7 +8,7 @@ const Authprovider = ({ children }) => {
         token: "",
     });
 
-    const [theme, settheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")  //theme context
+    const [theme, settheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light") 
     const [sem, setsem] = useState()
     const [cusername, setcusername] = useState(localStorage.getItem("username") ? localStorage.getItem("username") : "")
 

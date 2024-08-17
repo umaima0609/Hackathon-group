@@ -8,9 +8,6 @@ const Layout = () => {
         <div>
             <Nav />
             <Home />
-            
-            
-
             <Footer />
         </div>
 
