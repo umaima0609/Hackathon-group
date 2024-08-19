@@ -25,7 +25,7 @@ const Signup = () => {
   const shifts = async () => {
     const { data } = await axios.get("https://smit-student-feedbacker-backend.vercel.app/api/v1/register")
     console.log(data)
-    setshifts(data.shifts)
+    // setshifts(data.shifts)
   }
 
   const handlesubmit = async (e) => {
