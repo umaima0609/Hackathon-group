@@ -10,7 +10,7 @@
     "test": "jest"
     
   },
-  "proxy": "http://localhost:5173",
+
   "dependencies": {
     "@react-pdf/renderer": "^3.1.12",
     "antd": "^5.8.2",
