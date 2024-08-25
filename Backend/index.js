@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use(cors({
   
-  origin:  'http://localhost:5173',
+  origin:  'https://smit-student-feedbacker.vercel.app/',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true
 }));
