@@ -63,7 +63,7 @@ router.post("/register", async (req, res) => {
     const subject = "Welcome";
     const text = "Welcome to Feedbacker";
     var mailOptions = {
-        from: process.env.SMTP_MAIL,
+        from: process.env.EMAIL_USER ,
         to: email,
         subject: subject,
         text: text,
@@ -89,8 +89,9 @@ router.post("/register", async (req, res) => {
     });
 });
 
-router.post("/login", async (req, res) => {               // http://localhost:5000/api/v1/login
+router.post("/login", async (req, res) => {               
     try {
+        console.log("trueeeeeeeeeeeeeeeeee");
         const { password, email } = req.body;
         //validation
         if (!password | !email) {
@@ -132,7 +133,7 @@ router.post("/login", async (req, res) => {               // http://localhost:50
             token,
         });
     } catch (error) {
-        console.log(error);
+        console.log( "errorrrrrrrrrrrrrrr");
         return res.status(500).send({
             success: false,
             message: "Error In Login Callcback",
